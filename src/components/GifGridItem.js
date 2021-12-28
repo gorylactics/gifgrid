@@ -12,7 +12,7 @@ import React from 'react'
 export const GifGridItem = ({id , title ,  url}) => {
     console.log(id , title ,  url)
     return (
-        <div>
+        <div className=''>
             <h3>{title}</h3>
             <img src={url} alt={title}/>
             
