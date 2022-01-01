@@ -1,0 +1,6 @@
+1 Se crea la opcion para buscar y agregar categorias Addcategory.js
+2 Se crea el archivo que trae la data getGifs.js
+3 Se crea el archivo para traer la data helpers/getGifs.js
+4 Se crea el state vacio y su setState para almacenar la data usefechtGif.js
+5 Se crea el componenteContenedor para mostrar toda la data GifGrid.js
+6 Se crea el item de la data para ser montado en el componenteContenedor (GifGridItem.js) 
