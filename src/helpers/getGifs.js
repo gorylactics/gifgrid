@@ -1,3 +1,5 @@
+
+
 export const getGifts = async(category)=>{
     
     const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=10&api_key=oiHbqpSMwYCqJNuEwrl9AthJWulF1Uto`;
@@ -9,6 +11,6 @@ export const getGifts = async(category)=>{
             title : i.title,
             url : i.images?.downsized_medium.url
         }
-    })
+    });
     return gifs;
 }

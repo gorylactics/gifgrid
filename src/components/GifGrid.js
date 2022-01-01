@@ -1,32 +1,19 @@
-import React , {useEffect , useState} from "react";
-import { getGifts } from "../helpers/getGifs";
-import { GifGridItem } from "./GifGridItem";
 
+import { useFetchGif } from "../hooks/useFetchGif"
+import {GifGridItem} from '../components/GifGridItem'
 
 export const GifGrid = ({category})=>{  
-    
-    const [images, setImages] = useState([])
 
-    useEffect(()=>{
-        getGifts(category)
-            .then(img => setImages(img));
-    }, [category])
-
-    
+    const {data : images , loading}  = useFetchGif(category)
+    console.log(images)
+    console.log(loading)
     return(
-        // <>
-        // <h3>{category}</h3>
-        // <ol>
-        //     {/* {images.map(i => <li key={i.id}>{i.title}</li>)} */}
-        //     {images.map(({id , title}) => <li key={id}>{title}</li>)}
-        //     {/* aca se desestructua la imagen mediante sus atributos */}
-        // </ol>
-        // </>
         <>
             <h3>{category}</h3>
+            {loading && <h1>'Cargando...'</h1>}
             <div className="card-grid">
                 {images.map(img =>(
-                    <GifGridItem 
+                    <GifGridItem
                         key={img.id} 
                         img={img}
                         url={img.url}
