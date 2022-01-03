@@ -7,5 +7,4 @@ describe('prueba en <GifGridItem />', () => {
         const wrapped = shallow(<GifGridItem />);
         expect(wrapped).toMatchSnapshot();
     })
-    
 })
