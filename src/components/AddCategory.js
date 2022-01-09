@@ -11,12 +11,13 @@ export const AddCategory = ({setCategory})=>{
     const handleSubmit = (e)=>{
         e.preventDefault();
         if(inputValue.trim().length > 2){
-            setCategory(cat => [inputValue, ...cat ] );
+            setCategory(cat => [inputValue, ...cat] );
             setInputValue('')
         }
     }
     return(
         <form onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input type="text" value={inputValue} onChange={handleInputChange} />
         </form>
     )
