@@ -12,3 +12,5 @@ describe('Prueba del helper getGifs', () => {
         expect(gifs.length).toBe(0)
     })
 })
+
+
